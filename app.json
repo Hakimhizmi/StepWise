@@ -21,11 +21,15 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#000000"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.hakimhizmi12.StepWise"
     },
     "web": {
       "favicon": "./assets/images/adaptive-icon.png"
-    }, 
+    },
     "plugins": [
       [
         "expo-image-picker",
@@ -33,6 +37,11 @@
           "photosPermission": "The app accesses your photos to let you share them with your friends."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8062d198-5343-48a6-a535-080a3aa3ff24"
+      }
+    }
   }
 }
