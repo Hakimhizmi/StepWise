@@ -151,7 +151,7 @@ export default function Steps({ navigation }) {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <View className="h-screen bg-[#FCF6F1] pt-4 pb-8">
         <View className="px-4 flex flex-row items-center justify-between">
-          <TouchableOpacity onPress={() => navigation.jumpTo('home')} className="p-3 rounded-full bg-black">
+          <TouchableOpacity onPress={() => navigation.goBack()} className="p-3 rounded-full bg-black">
             <AntDesign name="arrowleft" size={20} color="white" />
           </TouchableOpacity>
           <View className="flex flex-row gap-2">
@@ -164,7 +164,8 @@ export default function Steps({ navigation }) {
           </View>
         </View>
         <View className="px-4 py-6">
-          <Text className="text-5xl font-normal text-black">{projectInfo ? projectInfo?.Title : "Loading...."}</Text>
+          <Text className="text-5xl font-normal text-black" numberOfLines={2} 
+            ellipsizeMode='tail'>{projectInfo ? projectInfo?.Title : "Loading...."}</Text>
           <Text className="mt-1 text-md font-normal text-black/90">{projectInfo ? `Created on ${projectInfo?.CreationDate}.` : "Loading...."}</Text>
         </View>
         {Loading ?
@@ -174,7 +175,7 @@ export default function Steps({ navigation }) {
           :
           <View className="py-5 px-4">
             {steps.length > 0 ?
-            <View style={{ maxHeight: 630, overflow: 'hidden' }}>
+            <View style={{ maxHeight: 580, overflow: 'hidden' }}>
               <DraggableFlatList
                 data={steps}
                 onDragEnd={handleDragEnd}

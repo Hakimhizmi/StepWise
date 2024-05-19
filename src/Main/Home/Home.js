@@ -1,10 +1,7 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react'
 import { ActivityIndicator, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { myContext } from '../../../App'
-import Feather from '@expo/vector-icons/Feather';
-import AntDesign from '@expo/vector-icons/AntDesign';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import { MaterialCommunityIcons , Feather , AntDesign , MaterialIcons , FontAwesome5 } from '@expo/vector-icons';
 import Projects from './components/projects';
 import AddNewCategory from './components/addNewCategory';
 import Category from './components/category';
@@ -78,7 +75,10 @@ export default function Home({ navigation }) {
               <Feather name="menu" size={20} color="white" />}
           </TouchableOpacity>
           {toggleMenu &&
-            <View className="absolute right-16 flex flex-row space-x-2 transition-all duration-500" >
+            <View className="absolute right-16 -ml-1 flex flex-row space-x-2 transition-all duration-500" >
+               <TouchableOpacity onPress={() => navigation.jumpTo('saved')} className="p-3 bg-black rounded-full">
+               <MaterialCommunityIcons name="content-save-all-outline" size={20} color="white" />
+              </TouchableOpacity>
               <TouchableOpacity onPress={() => setToggleModalCategory(true)} className="p-3 bg-black rounded-full">
                 <MaterialIcons name="category" size={20} color="white" />
               </TouchableOpacity>

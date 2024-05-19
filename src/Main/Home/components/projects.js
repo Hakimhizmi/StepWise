@@ -30,20 +30,22 @@ export default function Projects({ projects, setProjects, navigation }) {
             style={{ width: '100%', height: 295 }}
             className="object-cover"
           >
-            <LinearGradient colors={['rgba(0, 0, 0, 0)', 'rgba(198, 235, 178, 0.90)', 'rgba(198, 235, 178, 1)']} className="h-full">
-              <View className="px-5 py-4 flex ">
+            <LinearGradient colors={['rgba(0, 0, 0, 0)', 'rgba(198, 235, 178, 0.90)', 'rgba(198, 235, 178, 1)']} className="h-full" >
+              <View className="px-5 py-4 flex h-full">
                 <TouchableOpacity onPress={() => handleSaveProject(item.ProjectID, item.IsSaved === 1 ? 0 : 1)} className="bg-black p-2 ml-auto rounded-full">
                   {item.IsSaved === 0 ? <AntDesign name="save" size={20} color="white" /> :
                     <MaterialCommunityIcons name="content-save-off-outline" size={20} color="white" />}
                 </TouchableOpacity>
-                <Text className="mt-16 text-3xl font-normal text-black">{item.Title}</Text>
-                <Text className="mt-1 mb-6 text-lg font-normal text-black">{item.CategoryID ? `Category ${item?.CategoryName}` : 'No category'}</Text>
-                <View className="flex flex-row gap-2">
-                  <View className="px-4 py-2 bg-white rounded-xl">
-                    <Text className="font-semibold text-black">{item?.StepCount || "No"} steps</Text>
-                  </View>
-                  <View className="px-4 py-2 bg-white rounded-xl">
-                    <Text className="font-semibold text-black">{item?.ImageCount || "No"} images</Text>
+                <View className="mt-auto mb-5">
+                  <Text className="text-3xl font-normal text-black">{item.Title}</Text>
+                  <Text className="mt-1 mb-2 text-lg font-normal text-black">{item.CategoryID ? `Category ${item?.CategoryName}` : 'No category'}</Text>
+                  <View className="flex flex-row gap-2">
+                    <View className="px-4 py-2 bg-white rounded-xl">
+                      <Text className="font-semibold text-black">{item?.StepCount || "No"} steps</Text>
+                    </View>
+                    <View className="px-4 py-2 bg-white rounded-xl">
+                      <Text className="font-semibold text-black">{item?.ImageCount || "No"} images</Text>
+                    </View>
                   </View>
                 </View>
               </View>

@@ -210,7 +210,7 @@ export const getProjects = (CategoryID) => {
         }
 
         // Order by the most recently created project first
-        query += ` ORDER BY projects.ProjectID DESC`;
+        query += ` ORDER BY projects.ProjectID ASC`;
 
         tx.executeSql(
           query,
@@ -271,15 +271,34 @@ export const DeleteProject = async (projectId) => {
   });
 };
 
-export const saveProject= (projectId , value) => {
+export const saveProject = (projectId, value) => {
   return new Promise((resolve, reject) => {
     db.transaction(
       tx => {
         tx.executeSql(
           'UPDATE projects SET IsSaved = ? WHERE ProjectID = ?',
-          [value,projectId],
+          [value, projectId],
           (_, result) => {
             resolve(result.rowsAffected); // Returns the number of rows affected
+          },
+          (_, error) => reject(error)
+        );
+      },
+      error => reject(error)
+    );
+  });
+};
+
+export const getSavedProjects = () => {
+  return new Promise((resolve, reject) => {
+    db.transaction(
+      tx => {
+        tx.executeSql(
+          'SELECT projects.*, categories.Name AS CategoryName FROM projects LEFT JOIN categories ON projects.CategoryID = categories.CategoryID WHERE projects.IsSaved = 1 ORDER BY projects.ProjectID DESC',
+          [],
+          (_, { rows }) => {
+            const projects = rows._array;
+            resolve(projects);
           },
           (_, error) => reject(error)
         );
