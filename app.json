@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#000000"
       },
       "permissions": [
@@ -28,7 +28,7 @@
       "package": "com.hakimhizmi12.StepWise"
     },
     "web": {
-      "favicon": "./assets/images/adaptive-icon.png"
+      "favicon": "./assets/images/icon.png"
     },
     "plugins": [
       [
@@ -40,7 +40,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "8062d198-5343-48a6-a535-080a3aa3ff24"
+        "projectId": "ea6f68c9-9019-4656-bfbb-7f13bff5e712"
       }
     }
   }

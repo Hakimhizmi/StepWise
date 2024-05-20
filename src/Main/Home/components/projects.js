@@ -58,9 +58,9 @@ export default function Projects({ projects, setProjects, navigation }) {
           </View>
         </View>
       ))
-        : <View className="py-32 flex items-center justify-center">
-          <AntDesign name="frowno" size={60} color="#9ca3af" />
-          <Text className="mt-2 text-[#9ca3af] font-light text-xl text-center">Currently, no projects have been added. Please ensure to add the first project.</Text>
+        : <View className="py-24 flex items-center justify-center">
+          <AntDesign name="frowno" size={50} color="#9ca3af" />
+          <Text className="mt-2 text-[#9ca3af] font-light text-lg text-center">Currently, no projects have been added. Please ensure to add the first project.</Text>
         </View>
       }
     </View>

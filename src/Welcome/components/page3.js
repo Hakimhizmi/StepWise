@@ -26,8 +26,8 @@ export default function Page3({ }) {
     }
     return (
         <SafeAreaView className="h-screen flex items-center justify-start py-10 relative bg-black">
-            <View className='px-5 py-8'>
-                <Text className="text-6xl text-white font-light">Ready to take the first step towards your goals?</Text>
+            <View className='px-4 py-8'>
+                <Text className="text-4xl text-white font-light">Ready to take the first step towards your goals?</Text>
                 <Image source={require('../../../assets/images/stepVector.png')} alt='stepVector' className="mt-3 mx-auto w-64 h-64" />
 
             </View>

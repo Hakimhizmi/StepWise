@@ -14,8 +14,8 @@ export default function Page1({ navigation }) {
 
           <Image source={require('../../../assets/images/logo.png')} alt='logo' />
           <View className="mt-7 flex items-start">
-            <Text className="text-6xl text-white font-light">Welcome to</Text>
-            <Text className="text-6xl text-white font-normal italic ml-32">StepWise</Text>
+            <Text className="text-5xl text-white font-light">Welcome to</Text>
+            <Text className="text-5xl text-white font-normal italic ml-32">StepWise</Text>
           </View>
           <Text  className="mb-20 mt-10 px-4 text-sm text-white font-light">"Introducing StepWise, your go-to for task, hobby, and project organization. Easily break down processes into steps, complete with notes and photos,
             simplifying your path to success."</Text>

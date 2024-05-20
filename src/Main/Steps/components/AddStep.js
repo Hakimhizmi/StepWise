@@ -85,11 +85,11 @@ export default function AddStep({ toggleModalNewStep, setToggleModalNewStep, rel
 
                     <Text className="mt-6 text-lg font-bold text-gray-800">Step Image </Text>
                     <View className="mt-3 flex flex-row space-x-4">
-                        <TouchableOpacity onPress={pickImage} className="flex flex-col space-y-2 items-center justify-center px-10 py-4 bg-gray-100 border border-black/50 rounded-xl">
+                        <TouchableOpacity onPress={pickImage} className="flex flex-col space-y-2 items-center justify-center px-8 py-4 bg-gray-100 border border-black/50 rounded-xl">
                             <Entypo name="images" size={24} color="black" />
                             <Text className="font-bold text-sm">Pick an image</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={takeImage} className="flex flex-col space-y-2 items-center justify-center px-10 py-4 bg-gray-100 border border-black/50 rounded-xl">
+                        <TouchableOpacity onPress={takeImage} className="flex flex-col space-y-2 items-center justify-center px-8 py-4 bg-gray-100 border border-black/50 rounded-xl">
                             <Entypo name="camera" size={24} color="black" />
                             <Text className="font-bold text-sm">Take a photo</Text>
                         </TouchableOpacity>
